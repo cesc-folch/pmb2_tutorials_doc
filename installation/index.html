@@ -95,7 +95,6 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">PMB-2 Installation tutorial ROS2</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#purpose">Purpose</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#id1">Installation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#workspace">Workspace</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../mapping/index.html">PMB-2 Mapping tutorial ROS2</a></li>
@@ -173,40 +172,14 @@
 <span id="installation"></span><h1>PMB-2 Installation tutorial ROS2<a class="headerlink" href="#pmb-2-installation-tutorial-ros2" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="purpose">
 <h2>Purpose<a class="headerlink" href="#purpose" title="Permalink to this headline">¶</a></h2>
-<p>This tutorial shows how to install all the packages you need and set up a workspace to simulate PMB-2 navigation and mapping.</p>
+<p>This tutorial shows how to install all the packages you need to simulate PMB-2 navigation and mapping.</p>
 </div>
 <div class="section" id="id1">
 <h2>Installation<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
 <p>Install all the ros offical packages for pmb2.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo apt update
 sudo apt install ros-foxy-pmb2*
-</pre></div>
-</div>
-</div>
-<div class="section" id="workspace">
-<h2>Workspace<a class="headerlink" href="#workspace" title="Permalink to this headline">¶</a></h2>
-<p>We first create the directories for the workspace.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir -p ~/pmb2_public_ws/src
-<span class="nb">cd</span> ~/pmb2_public_ws/src
-</pre></div>
-</div>
-<p>Then, inside the <cite>src</cite> folder we clone the following github repositories:</p>
-<p>The <a class="reference external" href="https://github.com/pal-robotics/pmb2_simulation">pmb2_simulation</a>:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git clone https://github.com/pal-robotics/pmb2_simulation.git
-<span class="nb">cd</span> pmb2_simulation
-git checkout foxy-devel
-<span class="nb">cd</span> ..
-</pre></div>
-</div>
-<p>The <a class="reference external" href="https://github.com/pal-robotics/pal_gazebo_worlds">pal_gazebo_worlds</a>:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git clone https://github.com/pal-robotics/pal_gazebo_worlds.git
-<span class="nb">cd</span> pal_gazebo_worlds
-git checkout foxy-devel
-<span class="nb">cd</span> ..
-</pre></div>
-</div>
-<p>After that we compile everything.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>colcon build
+sudo apt install ros-foxy-pal-gazebo-worlds
 </pre></div>
 </div>
 </div>
